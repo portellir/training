@@ -80,6 +80,6 @@ resource "dnsimple_record" "example" {
   # ...
   domain = "terraform.rocks"
   type   = "A"
-  name   = "..."
+  name   = "something"
   value  = "${aws_instance.web.0.public_ip}" # OR: "{element(aws_instance.web.*.public_ip, 0)}" OR: count.index instead of 0
 }
